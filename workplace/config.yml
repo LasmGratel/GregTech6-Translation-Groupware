@@ -754,6 +754,7 @@ generators:
         subs:
           - gemType
           - gem
+  - group: gemMaterial # TODO why this duplicates?
     namespace: S:oredict.gem
     rules:
       - s: "{0}"
@@ -1227,8 +1228,6 @@ generators:
       Manganese Chloride: 氯化锰
       Peat: 泥炭
       Bituminous Peat: 沥青泥炭
-      Potassium Carbonate: 碳酸钾
-      Sodium Carbonate: 碳酸钠
       Emerald Green: 绿色绿宝石
       Tofu: 豆腐
       Niobium Pentoxide: 五氧化二铌
@@ -1263,9 +1262,7 @@ generators:
       Potassium Aluminate: 偏铝酸钾
       Potassium Bisulfate: 硫酸氢钾
       Potassium Carbonate: 碳酸钾
-      Potassium Feldspar: 钾长石
       Potassium Hydroxide: 氢氧化钾
-      Potassium Nitrate: 硝酸钾
       Potassium Persulfate: 过硫酸钾
       Potassium Pyrosulfate: 焦硫酸钾
       Potassium Sulfate: 硫酸钾
@@ -1278,7 +1275,6 @@ generators:
       Sodium Bisulphate: 硫酸氢钠
       Sodium Carbonate: 碳酸钠
       Sodium Hydroxide: 氢氧化钠
-      Sodium Nitrate: 硝酸钠
       Sodium Peroxide: 过氧化钠
       Sodium Persulfate: 过硫酸钠
       Sodium Persulphate: 过硫酸钠
@@ -1301,16 +1297,6 @@ generators:
       Raw Compost: 可堆肥材料
       Chemical X: 试剂X
       Chemical Y: 试剂Y
-      Chemical Y-1: 试剂Y-1
-      Chemical Y-10: 试剂Y-10
-      Chemical Y-2: 试剂Y-2
-      Chemical Y-3: 试剂Y-3
-      Chemical Y-4: 试剂Y-4
-      Chemical Y-5: 试剂Y-5
-      Chemical Y-6: 试剂Y-6
-      Chemical Y-7: 试剂Y-7
-      Chemical Y-8: 试剂Y-8
-      Chemical Y-9: 试剂Y-9
       Chemical Z: 试剂Z
       Netherite Scrap: 远古残骸废料
       Abyssal Oat: 深渊燕麦
@@ -2442,7 +2428,6 @@ generators:
       Refined Desh: 精制戴斯 
       Thaumium: 神秘锭
       Stainless Steel: 不锈钢
-      Titanium: 钛
       Chromium: 铬
       Bismuth: 铋
       Tungstencarbide: 碳化钨
@@ -2489,7 +2474,6 @@ generators:
       Magnalium: 镁铝合金
       Enderium: 末影
       Vibranium Silver: 银振金合金
-      Wood: 木
       Treated Wood: 防腐木
       Plastic: 塑料
       Ironwood: 铁木
@@ -3417,7 +3401,8 @@ generators:
   # qt_machine
   - group: qt_machineSmooth
     namespace: "S:qwertech.machines"
-    extensions: "qt"
+    extensions:
+      - "qt"
     rules:
       - s: "Smooth {0}"
         t: "光滑{0}"
@@ -3425,7 +3410,8 @@ generators:
           - qt_machine
   - group: qt_machine
     namespace: "S:qwertech.machines"
-    extensions: "qt"
+    extensions:
+      - "qt"
     rules:
       - s: "{0} {1}"
         t: "{0}{1}"
@@ -3435,7 +3421,8 @@ generators:
   - group: qt_machineType
     namespace: "S:qwertech.machines"
     completed: false
-    extensions: "qt"
+    extensions:
+      - "qt"
     dict:
       Crafting Table: 合成站
       Counterdrawers: 抽屉柜

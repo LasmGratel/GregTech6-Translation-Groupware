@@ -121,3 +121,8 @@ bin/*
 test/test_runner
 
 # End of https://github.com/kigster/cmake-project-template/master/.gitignore
+
+
+# Added by cargo
+
+/target
