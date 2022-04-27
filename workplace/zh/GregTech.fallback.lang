@@ -6,7 +6,7 @@ enablelangfile {
 languagefile {
     S:"Dirty Water.name"=污水
     S:"Heavy Oil.name"=重油
-    S:"Hot Spring Water.name"=Hot Spring Water
+    S:"Hot Spring Water.name"=热温泉水
     S:"Light Oil.name"=清油
     S:"Natural Gas.name"=天然气
     S:"Raw Oil.name"=原油
@@ -175,8 +175,6 @@ languagefile {
     S:fluid.binnie.winered.name=红葡萄酒
     S:fluid.binnie.winewhite=白葡萄酒
     S:fluid.binnie.winewhite.name=白葡萄酒
-    S:fluid.bioethanol=生物乙醇
-    S:fluid.bioethanol.name=生物乙醇
     S:fluid.blackberryjuice=黑莓汁
     S:fluid.blackberryjuice.name=黑莓汁
     S:fluid.blackberrysmoothie=黑莓冰沙
@@ -305,8 +303,6 @@ languagefile {
     S:fluid.hottritiatedwater.name=热超重水
     S:fluid.hydrogen=氢
     S:fluid.hydrogen.name=氢
-    S:fluid.ic2constructionfoam=建筑泡沫
-    S:fluid.ic2constructionfoam.name=建筑泡沫
     S:fluid.ic2coolant=冷却液
     S:fluid.ic2coolant.name=冷却液
     S:fluid.ic2hotcoolant=热冷却液
@@ -725,12 +721,10 @@ languagefile {
     S:fluid.thoriumsalt.name=熔融钍盐
     S:fluid.tomatosauce=番茄酱
     S:fluid.tomatosauce.name=番茄酱
-    S:fluid.tritium=氚
-    S:fluid.tritium.name=氚
     S:fluid.vinegar=葡萄醋
     S:fluid.vinegar.name=葡萄醋
-    S:fluid.watergeothermal=Hot Spring Water
-    S:fluid.watergeothermal.name=Hot Spring Water
+    S:fluid.watergeothermal=热温泉水
+    S:fluid.watergeothermal.name=热温泉水
     S:fluid.wheathopsmash=麦芽浆
     S:fluid.wheathopsmash.name=麦芽浆
     S:fluid.whitegrapesmoothie=白葡萄冰沙
@@ -793,6 +787,7 @@ languagefile {
     S:gt.armor.hazmat.universal.legs.name=全防裤
     S:gt.armor.hazmat.universal.legs.tooltip_main=穿齐一套可以抵御一切危险
     S:gt.autocrafting.insert.blueprint=把自动合成表蓝图放在这里
+    S:gt.behaviour.chunkremove=删除区块，只保留基岩层
     S:gt.behaviour.cropnalyzer=能扫描世界中的作物
     S:gt.behaviour.cure.zombie.strong=可以治愈强壮的僵尸村民
     S:gt.behaviour.cure.zombie.weak=可以治愈虚弱的僵尸村民
@@ -1344,6 +1339,7 @@ languagefile {
     S:gt.drink.seedoil=
     S:gt.drink.short.mead=维京人的最爱
     S:gt.drink.slime=绿史莱姆汁，黏黏的！和**一样！
+    S:gt.drink.slime.blue=蓝史莱姆汁
     S:gt.drink.sluicejuice=
     S:gt.drink.soda=普通的二氧化碳水溶物
     S:gt.drink.soymilk=乳糖不耐受症患者的牛奶替代品
@@ -1396,11 +1392,12 @@ languagefile {
     S:gt.lang.blastresistance=爆炸抗性:
     S:gt.lang.cheap.overclocking=在消耗额外能量时可以超频
     S:gt.lang.contained.materials=含有材料:
-    S:gt.lang.cover.tooltip=可以用作覆盖版
+    S:gt.lang.cover.tooltip=可以用作覆盖板
     S:gt.lang.efficiency=效率
     S:gt.lang.emits.redstoneflux.lossless=可以无损地输出红石通量(RF)
     S:gt.lang.emits.redstoneflux.lossy=可以有损耗地输出红石通量(RF)，损耗:
     S:gt.lang.emits.used.steam=输出蒸馏水
+    S:gt.lang.enchantment.bonus=可以像书架那样影响附魔台
     S:gt.lang.energy.capacity=容量
     S:gt.lang.energy.contained=存储的能量
     S:gt.lang.energy.convert.from=将
@@ -1569,7 +1566,7 @@ languagefile {
     S:gt.lang.tool.to.harvest=采集工具
     S:gt.lang.tool.tooltip.axe=超能GT斧
     S:gt.lang.tool.tooltip.chisel=凿刻可被凿刻的方块
-    S:gt.lang.tool.tooltip.crowbar=拆卸覆盖版和旋转铁轨
+    S:gt.lang.tool.tooltip.crowbar=拆卸覆盖板和旋转铁轨
     S:gt.lang.tool.tooltip.cutter=剪线钳
     S:gt.lang.tool.tooltip.drill=放置锯末炸药和强化砖块
     S:gt.lang.tool.tooltip.ducttape=
@@ -1592,7 +1589,7 @@ languagefile {
     S:gt.lang.tool.tooltip.saw=可以给树剥皮
     S:gt.lang.tool.tooltip.scissors=
     S:gt.lang.tool.tooltip.scoop=捕捉昆虫
-    S:gt.lang.tool.tooltip.screwdriver=调整覆盖版, 机器和红石中继器
+    S:gt.lang.tool.tooltip.screwdriver=调整覆盖板, 机器和红石中继器
     S:gt.lang.tool.tooltip.scythe=大面积地收割农作物
     S:gt.lang.tool.tooltip.sense=大面积地收割农作物
     S:gt.lang.tool.tooltip.shears=
@@ -1610,9 +1607,9 @@ languagefile {
     S:gt.lang.unburnable=不可燃!
     S:gt.lang.use.chisel.to.decalcify=使用凿子除去钙化残留物
     S:gt.lang.use.chisel.to.switch.design=使用凿子改变表面纹理图案
-    S:gt.lang.use.controlcover.to.toggle=Use Cover Controller Cover to toggle ON/OFF
+    S:gt.lang.use.controlcover.to.toggle=使用控制器覆盖板控制开关
     S:gt.lang.use.crowbar.to.open=使用撬棍打开
-    S:gt.lang.use.crowbar.to.uncover=使用撬棍移除覆盖版
+    S:gt.lang.use.crowbar.to.uncover=使用撬棍移除覆盖板
     S:gt.lang.use.cutter.to.toggle=使用剪线钳切换模式
     S:gt.lang.use.geigercoutner.to.measure=使用盖革计数器测量
     S:gt.lang.use.magnifyingglass.to.detail=使用放大镜观察细节
@@ -1637,8 +1634,8 @@ languagefile {
     S:gt.lang.use.x.to.toggle.connection.pre=使用
     S:gt.lang.use.x.to.toggle.facing.post=设置朝向
     S:gt.lang.use.x.to.toggle.facing.pre=使用
-    S:gt.lang.use.x.to.toggle.facing2.post= to set secondary Facing
-    S:gt.lang.use.x.to.toggle.facing2.pre=Use 
+    S:gt.lang.use.x.to.toggle.facing2.post= 设置次要面
+    S:gt.lang.use.x.to.toggle.facing2.pre=使用 
     S:gt.lang.walkspeed=这个方块会改变行走速度
     S:gt.lang.wire.stats.amperage=电流(A):
     S:gt.lang.wire.stats.loss=损耗:
@@ -1894,7 +1891,6 @@ languagefile {
     S:gt.material.PotassiumSulphide=硫肝石
     S:gt.material.PotassiumSulphite=亚硫酸钾
     S:gt.material.Primitive=远古
-    S:gt.material.Prismarine=海晶石
     S:gt.material.Proton=质子
     S:gt.material.Pu238=Pu238
     S:gt.material.Pu239=Pu239
@@ -1948,7 +1944,6 @@ languagefile {
     S:gt.material.Starconium=Starconium
     S:gt.material.Starmetal=星辉
     S:gt.material.StrengthenedTerrasteelAlloy=强化泰拉钢合金
-    S:gt.material.Sugilite=硅铁锂钠石 (苏纪石)
     S:gt.material.Sulphur=硫
     S:gt.material.SulphurDioxide=二氧化硫
     S:gt.material.SulphurTrioxide=三氧化硫
@@ -1970,7 +1965,6 @@ languagefile {
     S:gt.material.Titan=铌钛合金
     S:gt.material.TitaniumIron=钛铁合金
     S:gt.material.Tourmaline=碧玺
-    S:gt.material.Tritium=氚
     S:gt.material.Tumbaga=Tumbaga
     S:gt.material.TungstenOxide=氧化钨
     S:gt.material.TungstenSteel=钨钢
@@ -1980,7 +1974,6 @@ languagefile {
     S:gt.material.U238=U238
     S:gt.material.Ultimate=极限
     S:gt.material.Unobtainium=难得素
-    S:gt.material.Unstable=不稳定
     S:gt.material.Unstableingot=不稳定锭
     S:gt.material.Uran=乌兰
     S:gt.material.Uranium238=铀-238
@@ -2077,7 +2070,7 @@ languagefile {
     S:gt.metatool.01.141.name=圆锯 (LV) (空)
     S:gt.metatool.01.15.name=软锤(空)
     S:gt.metatool.01.150.name=螺丝刀 (LV)
-    S:gt.metatool.01.150.tooltip=调整机器和覆盖版
+    S:gt.metatool.01.150.tooltip=调整机器和覆盖板
     S:gt.metatool.01.151.name=螺丝刀 (LV) (空)
     S:gt.metatool.01.16.name=扳手
     S:gt.metatool.01.16.tooltip=按住左键以拆卸机器
@@ -2209,12 +2202,14 @@ languagefile {
     S:gt.multiitem.books.1007.tooltip=
     S:gt.multiitem.books.2.tooltip=
     S:gt.multiitem.books.3.tooltip=
-    S:gt.multiitem.books.32000.tooltip=上面有一个青铜GT徽章
-    S:gt.multiitem.books.32001.tooltip=上面有一个青铜GT徽章
+    S:gt.multiitem.books.32000.tooltip=封面有一个青铜GT徽章
+    S:gt.multiitem.books.32001.tooltip=封面有一个青铜GT徽章
     S:gt.multiitem.books.32002.name=材料词典
     S:gt.multiitem.books.32002.tooltip=包含了材料的数据
     S:gt.multiitem.books.32003.name=材料词典
     S:gt.multiitem.books.32003.tooltip=包含了材料的数据
+    S:gt.multiitem.books.32004.tooltip=封面有一个辐射符号
+    S:gt.multiitem.books.32005.tooltip=封面有一个辐射符号
     S:gt.multiitem.books.4.tooltip=
     S:gt.multiitem.books.5.tooltip=
     S:gt.multiitem.books.6.tooltip=
@@ -2338,6 +2333,8 @@ languagefile {
     S:gt.multiitem.bottles.2200.tooltip=可以用来做胶水
     S:gt.multiitem.bottles.2201.name=粉色粘液瓶
     S:gt.multiitem.bottles.2201.tooltip=可以用来做胶水
+    S:gt.multiitem.bottles.2202.name=蓝色粘液瓶
+    S:gt.multiitem.bottles.2202.tooltip=可以用来做胶水
     S:gt.multiitem.bottles.2210.name=瓜拿纳
     S:gt.multiitem.bottles.2210.tooltip=
     S:gt.multiitem.bottles.2300.name=西瓜汁
@@ -2392,6 +2389,8 @@ languagefile {
     S:gt.multiitem.bottles.3200.tooltip=
     S:gt.multiitem.bottles.32000.name=墨水瓶
     S:gt.multiitem.bottles.32001.name=罐装靛蓝色染料
+    S:gt.multiitem.bottles.32763.name=鲜血瓶
+    S:gt.multiitem.bottles.32763.tooltip=
     S:gt.multiitem.bottles.32764.name=润滑油瓶
     S:gt.multiitem.bottles.32764.tooltip=
     S:gt.multiitem.bottles.32765.name=汞瓶
@@ -3336,12 +3335,9 @@ languagefile {
     S:gt.multiitem.food.12201.tooltip=用于制造简单的起火器
     S:gt.multiitem.food.12300.name=泥球
     S:gt.multiitem.food.12300.tooltip=
-    S:gt.multiitem.food.12310.name=褐色粘土球
     S:gt.multiitem.food.12310.tooltip=
-    S:gt.multiitem.food.12311.name=红色粘土球
     S:gt.multiitem.food.12311.tooltip=只有粘土能打败挑战!
     S:gt.multiitem.food.12312.name=Yellow Clay
-    S:gt.multiitem.food.12312.tooltip=Bentonite Clay
     S:gt.multiitem.food.12313.name=Blue Clay
     S:gt.multiitem.food.12313.tooltip=Palygorskite Clay / Fullers Earth
     S:gt.multiitem.food.12314.name=White Clay
@@ -4104,19 +4100,23 @@ languagefile {
     S:gt.multiitem.randomtools.998.tooltip=用来把食物装罐
     S:gt.multiitem.randomtools.999.name=空喷罐
     S:gt.multiitem.randomtools.999.tooltip=用来制造喷漆之类的东西
+    S:gt.multiitem.randomtools.9998.name=区块删除器
+    S:gt.multiitem.randomtools.9998.tooltip=
     S:gt.multiitem.randomtools.9999.name=世界生成工具(调试用)
     S:gt.multiitem.randomtools.9999.tooltip=
     S:gt.multiitem.randomtools.name=生成的物品
-    S:gt.multiitem.technological.1000.name=空白覆盖版
+    S:gt.multiitem.technological.1000.name=空白覆盖板
     S:gt.multiitem.technological.1000.tooltip=*空白*
     S:gt.multiitem.technological.10000.name=空白模具
     S:gt.multiitem.technological.10000.tooltip=用来制造其他模具
-    S:gt.multiitem.technological.1001.name=工作台覆盖版
-    S:gt.multiitem.technological.1001.tooltip=只是把工作台改成了覆盖版
-    S:gt.multiitem.technological.1002.name=状态显示覆盖版
+    S:gt.multiitem.technological.1001.name=工作台覆盖板
+    S:gt.multiitem.technological.1001.tooltip=只是把工作台改成了覆盖板
+    S:gt.multiitem.technological.1002.name=状态显示覆盖板
     S:gt.multiitem.technological.1002.tooltip=显示机器是否工作, 附带开关
+    S:gt.multiitem.technological.10029.tooltip=该模具只能用于生产非金属箔
     S:gt.multiitem.technological.1003.name=自动开关
     S:gt.multiitem.technological.1003.tooltip=当需要时自动开/关机器
+    S:gt.multiitem.technological.10031.tooltip=该模具只能用于生产非金属精细线缆
     S:gt.multiitem.technological.1004.name=能量显示面板
     S:gt.multiitem.technological.1004.tooltip=显示存储的能量
     S:gt.multiitem.technological.1005.name=红石机器开关
@@ -4157,8 +4157,10 @@ languagefile {
     S:gt.multiitem.technological.1021.tooltip=发出可控的红石信号
     S:gt.multiitem.technological.1022.name=通风口
     S:gt.multiitem.technological.1022.tooltip=向管道或机器内通入空气
+    S:gt.multiitem.technological.10229.tooltip=该模具只能用于生产非金属箔
     S:gt.multiitem.technological.1023.name=物品过滤器
     S:gt.multiitem.technological.1023.tooltip=允许指定物品通过
+    S:gt.multiitem.technological.10231.tooltip=该模具只能用于生产非金属精细线缆
     S:gt.multiitem.technological.1024.name=液体过滤器
     S:gt.multiitem.technological.1024.tooltip=允许指定液体通过
     S:gt.multiitem.technological.1025.name=控制器覆盖板
@@ -4735,7 +4737,6 @@ languagefile {
     S:gt.multitileentity.32713.name=锯末炸药
     S:gt.multitileentity.32714.name=木制储罐
     S:gt.multitileentity.32715.name=塑料储罐
-    S:gt.multitileentity.32716.name=不锈钢储罐
     S:gt.multitileentity.32720.name=木质浸洗桌
     S:gt.multitileentity.32721.name=木质浸洗盆
     S:gt.multitileentity.32722.name=榨汁机
@@ -4764,7 +4765,6 @@ languagefile {
     S:gt.multitileentity.32764.name=赞助者证书
     S:gt.multitileentity.32765.name=脚手架建筑泡沫方块
     S:gt.multitileentity.32766.name=微型下界传送门
-    S:gt.multitileentity.6241.name=物流量子存储器 (源质钢)
     S:gt.multitileentity.6983.name=天根木储物桶
     S:gt.multitileentity.6984.name=银树储物桶
     S:gt.multitileentity.6985.name=宏伟之木储物桶
@@ -4782,7 +4782,6 @@ languagefile {
     S:gt.multitileentity.6997.name=铁木储物桶
     S:gt.multitileentity.6998.name=木制储物桶
     S:gt.multitileentity.6999.name=木制储物桶
-    S:gt.multitileentity.8441.name=源质钢脚手架
     S:gt.multitileentity.9200.name=反应堆核心
     S:gt.multitileentity.9201.name=空燃料棒
     S:gt.multitileentity.9202.name=中子吸收棒
@@ -4996,7 +4995,6 @@ languagefile {
     S:gt.td.long.prefix.gem_based=宝石
     S:gt.td.long.prefix.ingot_based=锭
     S:gt.td.long.prefix.is_container=容器
-    S:gt.td.long.prefix.is_crate=板条箱
     S:gt.td.long.prefix.material_based=基于材料
     S:gt.td.long.prefix.needs_handle=需要手柄
     S:gt.td.long.prefix.needs_sharpening=需要锉削
@@ -5021,6 +5019,7 @@ languagefile {
     S:gt.td.long.prefix.unificatable=可统一
     S:gt.td.long.prefix.unificatable_recipes=可统一的配方
     S:gt.td.long.prefix.weapon_alike=武器
+    S:gt.td.long.prefix.wire_based=线缆
     S:gt.td.long.processing.blacklisted_smelter=不能在坩埚中融化
     S:gt.td.long.processing.centrifugable=可离心
     S:gt.td.long.processing.crucible_alloy=可用于冶炼合金
@@ -5040,6 +5039,7 @@ languagefile {
     S:gt.td.long.processing.soldering_material_good=好的焊接用金属
     S:gt.td.long.processing.unrecyclable=不可回收
     S:gt.td.long.processing.uum_synthesisable=可通过UU物质合成
+    S:gt.td.long.processing.washing_firestone=可用火石浸洗
     S:gt.td.long.processing.washing_mercury=可用汞浸洗
     S:gt.td.long.processing.washing_persulfate=可用过硫酸盐浸洗
     S:gt.td.long.processing.washing_sodiumpersulfate=可用过硫酸钠浸洗
@@ -5059,6 +5059,7 @@ languagefile {
     S:gt.td.long.properties.crystal=水晶
     S:gt.td.long.properties.dont_show_this_component=不作为部件显示
     S:gt.td.long.properties.ender_dragon_proof=防末影龙
+    S:gt.td.long.properties.explodes_in_nonvanilla_crafting_grid=在非原版合成台中会爆炸!
     S:gt.td.long.properties.explosive=易爆
     S:gt.td.long.properties.flammable=易燃
     S:gt.td.long.properties.food=食物
@@ -5164,7 +5165,6 @@ languagefile {
     S:gt.td.short.prefix.gem_based=宝石
     S:gt.td.short.prefix.ingot_based=锭
     S:gt.td.short.prefix.is_container=容器
-    S:gt.td.short.prefix.is_crate=板条箱
     S:gt.td.short.prefix.material_based=基于材料
     S:gt.td.short.prefix.needs_handle=需要手柄
     S:gt.td.short.prefix.needs_sharpening=需要锉削
@@ -5189,6 +5189,7 @@ languagefile {
     S:gt.td.short.prefix.unificatable=可统一
     S:gt.td.short.prefix.unificatable_recipes=可统一的配方
     S:gt.td.short.prefix.weapon_alike=武器
+    S:gt.td.short.prefix.wire_based=线缆
     S:gt.td.short.processing.blacklisted_smelter=不能在坩埚中融化
     S:gt.td.short.processing.centrifugable=可离心
     S:gt.td.short.processing.crucible_alloy=可用于冶炼合金
@@ -5208,6 +5209,7 @@ languagefile {
     S:gt.td.short.processing.soldering_material_good=好的焊接用金属
     S:gt.td.short.processing.unrecyclable=不可回收
     S:gt.td.short.processing.uum_synthesisable=可通过UU物质合成
+    S:gt.td.short.processing.washing_firestone=可用火石浸洗
     S:gt.td.short.processing.washing_mercury=可用汞浸洗
     S:gt.td.short.processing.washing_persulfate=可用过硫酸盐浸洗
     S:gt.td.short.processing.washing_sodiumpersulfate=可用过硫酸钠浸洗
@@ -5227,6 +5229,7 @@ languagefile {
     S:gt.td.short.properties.crystal=水晶
     S:gt.td.short.properties.dont_show_this_component=不作为部件显示
     S:gt.td.short.properties.ender_dragon_proof=防末影龙
+    S:gt.td.short.properties.explodes_in_nonvanilla_crafting_grid=在非原版合成台中会爆炸!
     S:gt.td.short.properties.explosive=易爆
     S:gt.td.short.properties.flammable=易燃
     S:gt.td.short.properties.food=食物
@@ -5710,7 +5713,6 @@ languagefile {
     S:oredict.arrowGtPlasticEmpty.name=轻质空箭
     S:oredict.arrowGtWoodEmpty.name=空箭
     S:oredict.billetAncientDebris.name=下界合金废料胚料
-    S:oredict.blockPlateGemGlass.name=玻璃板块
     S:oredict.bulletGtLargeEmpty.name=大型空包弹
     S:oredict.bulletGtMediumEmpty.name=中型空包弹
     S:oredict.bulletGtSmallEmpty.name=小型空包弹
@@ -5751,12 +5753,9 @@ languagefile {
     S:oredict.chemtubePositron.name=正电子试管
     S:oredict.chemtubeProton.name=质子试管
     S:oredict.chemtubeRadon.name=氡试管
-    S:oredict.chemtubeTritium.name=氚试管
     S:oredict.chemtubeXenon.name=氙试管
     S:oredict.chunkGtAncientDebris.name=下界合金废料小块
-    S:oredict.crateGtPlateGemGlass.name=玻璃板板条箱
     S:oredict.crushedTinyAncientDebris.name=小撮已回收的远古残骸
-    S:oredict.dustBlaze.name=烈焰粉
     S:oredict.foilPlastic.name=薄塑料板
     S:oredict.foilRubber.name=薄橡胶片
     S:oredict.nuggetAncientDebris.name=下界合金废料粒
@@ -5787,7 +5786,6 @@ languagefile {
     S:oredict.plantGtWartMilk.name=牛奶疣
     S:oredict.plateDoublePaper.name=两重纸板
     S:oredict.plateGemGlass.name=玻璃板
-    S:oredict.plateGemTinyGlass.name=小块玻璃板
     S:oredict.plateQuadruplePaper.name=四重纸板
     S:oredict.plateQuintuplePaper.name=五重纸板
     S:oredict.plateTinyPaper.name=纸屑
@@ -6319,7 +6317,6 @@ languagefile {
     S:oredict.scrapGtDeepslate.name=Deepslate Pebbles
     S:oredict.scrapGtDiorite.name=闪长岩碎石
     S:oredict.scrapGtEclogite.name=榴辉岩碎石
-    S:oredict.scrapGtEmpty.name=玻璃碎片
     S:oredict.scrapGtEndstone.name=末地石碎石
     S:oredict.scrapGtEpidote.name=绿帘石碎石
     S:oredict.scrapGtFlint.name=燧石碎石
