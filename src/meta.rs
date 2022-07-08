@@ -1,15 +1,12 @@
 use std::collections::{HashMap, HashSet};
-use std::fmt;
-use std::fmt::Write;
-use std::marker::PhantomData;
+use std::hash::{Hash, Hasher};
 use std::ops::AddAssign;
 use std::str::FromStr;
 use either::Either;
 use crate::rule::Rule;
 use serde::{Serialize, Deserialize, Deserializer, de};
-use serde::de::{MapAccess, Visitor};
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, Default, PartialEq, Eq)]
 pub struct GeneratorMeta {
     pub group: String,
 
@@ -23,30 +20,31 @@ pub struct GeneratorMeta {
     pub extensions: HashSet<String>,
 
     #[serde(default)]
-    pub dict: HashMap<String, StringOrHashMap>,
+    pub dict: Option<HashMap<String, StringOrHashMap>>,
 
     #[serde(default)]
-    pub rules: Vec<Rule>,
-
-    #[serde(skip)]
-    pub cached: bool,
+    pub rules: Option<Vec<Rule>>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 #[serde(transparent)]
 pub struct StringOrHashMap {
     #[serde(with = "either::serde_untagged")]
-    inner: Either<String, HashMap<String, String>>
+    pub inner: Either<String, HashMap<String, String>>
 }
 
 impl GeneratorMeta {
+    pub fn with_namespace(&self, namespace: String) -> Self {
+        let mut new = self.clone();
+        new.namespace = namespace;
+        new
+    }
+
     pub fn is_empty(&self) -> bool {
         self.group.is_empty()
     }
-}
 
-impl AddAssign for GeneratorMeta {
-    fn add_assign(&mut self, rhs: Self) {
+    pub fn combine(&mut self, rhs: &Self) {
         let mut this_ns = &self.namespace;
         let that_ns = &rhs.namespace;
         if this_ns.rfind(that_ns) == Some(0) {
@@ -60,6 +58,13 @@ impl AddAssign for GeneratorMeta {
             self.group.clear();
             return;
         }
-        rhs.extensions.into_iter().all(|x| self.extensions.insert(x));
+        rhs.extensions.iter().all(|x| self.extensions.insert(x.clone()));
+    }
+}
+
+impl Hash for GeneratorMeta {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        self.group.hash(state);
+        self.namespace.hash(state);
     }
 }

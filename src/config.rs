@@ -1,7 +1,10 @@
 use std::ffi::OsString;
 use std::path::Path;
-use clap::{Args, Command, Parser};
+use clap::{Parser};
+use either::Either;
 use serde::{Serialize, Deserialize};
+use crate::generator::{DictGenerator, Generator, RuleGenerator};
+use crate::lang::LangResult;
 use crate::meta::GeneratorMeta;
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -19,6 +22,87 @@ impl Config {
             generators: vec![],
         }
     }
+
+    pub fn generators(&self) {
+        let mut list: Vec<Box<dyn Generator>> = vec![];
+        for meta in self.generators.iter() {
+            if let Some(rules) = &meta.rules {
+                // RuleGenerator
+                list.push(Box::new(RuleGenerator {
+                    meta, rules
+                }));
+            } else if let Some(dict) = &meta.dict {
+                for (key, value) in dict.iter() {
+                    if let Either::Left(str) = &value.inner {
+                        list.push(Box::new(DictGenerator {
+                            meta, dict: vec![(key.to_string(), str.to_string())]
+                        }));
+
+                        /*
+                        if (dict_item.is_map()) {
+
+                } else {
+                    // normal dict
+                    if (!gen) {
+                        gen = std::make_shared<DictGenerator>(meta);
+                        gen->dict() = std::make_shared<LangList>();
+                    }
+                    auto &dict = *(gen->dict());
+                    dict.emplace_back(_csubstr2str(dict_item.key()),
+                                      _csubstr2str(dict_item.val()));
+                }*/
+                    } else if let Either::Right(map) = &value.inner {
+                        for (child_key, child_value) in map.iter() {
+                            let mut dict = vec![];
+                            dict.push((key.to_string(), child_value.to_string()));
+                            list.push(Box::new(DictGenerator {
+                                meta, dict
+                            }));
+                        }
+                        /*
+                        for (auto dict_item_children : dict_item.children()) {
+                        auto local_gen = std::make_shared<DictGenerator>(
+                            std::make_shared<NSGeneratorMeta>(
+                                _csubstr2str(dict_item_children.key()), meta));
+                        local_gen->dict() = std::make_shared<LangList>();
+                        auto &dict = *(local_gen->dict());
+                        dict.emplace_back(_csubstr2str(dict_item.key()),
+                                          _csubstr2str(dict_item_children.val()));
+                        result.push_back(std::move(local_gen));
+                    }*/
+                    }
+                }
+            }
+        }
+    }
+/*
+// DictGenerator
+        if (child.is_map()) {
+            shared_ptr<DictGenerator> gen = nullptr;
+            for (auto dict_item : child.children()) {
+
+            }
+            if (gen) {
+                // final commit
+                result.push_back(std::move(gen));
+            }
+        } else {
+            throw std::invalid_argument("invalid dict for generator");
+        }
+    } else if (ckey == "rules") {
+    // RuleGenerator
+    if (child.is_seq()) {
+    auto gen = std::make_shared<RuleGenerator>(meta);
+    auto &rules = gen->rules();
+    for (auto rule : child.children()) {
+    rules.push_back(parse_rule(rule));
+    }
+    result.push_back(std::move(gen));
+    } else {
+    throw std::invalid_argument("invalid rules for generator");
+    }
+    }
+    }*/
 }
 
 #[derive(Parser, Debug)]
